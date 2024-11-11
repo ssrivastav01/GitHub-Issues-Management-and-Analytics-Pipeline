@@ -1,0 +1,10 @@
+services:
+  elasticsearch:
+    image: elasticsearch:8.11.3
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - node.name=localhost
+      - network.host=0.0.0.0
+    ports:
+      - "9200:9200"
